@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../css/styles.css"
 import { Button } from "react-bootstrap";
 import Seasons from "./Seasons";
 import Weekdays from "./Weekdays";
