@@ -5,8 +5,8 @@ import "react-dropdown/style.css";
 
 
 class Seasons extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   // constructor(props) {
   //   super(props);
     // this.state = {
