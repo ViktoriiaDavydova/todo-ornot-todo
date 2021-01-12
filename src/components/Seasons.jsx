@@ -7,15 +7,11 @@ import "react-dropdown/style.css";
 class Seasons extends Component {
   constructor(props) {
     super(props);
-  // constructor(props) {
-  //   super(props);
-    // this.state = {
-    //   // options: [],
-    //   season: {
-    //     value: "",
-    //     label: "",
-    //   },
-    // };
+
+    this.state = {
+      // options: [],
+      season: ""
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -37,20 +33,20 @@ class Seasons extends Component {
 
   handleChange = newValue => {
     console.log("season", newValue);
-    // this.setState({ value: newValue.value });
+    this.setState({ season: newValue });
     this.props.handleSeasonChange(newValue);
   };
 
 
   render() {
-    
+    const defaultOption = this.state.season;
     return (
       <div>
         <Dropdown
           className="dropDown"
           options={this.options}
           onChange={this.handleChange}
-          value={this.props.seasonOption}
+          value={defaultOption}
           placeholder="Select an option"
           required={true}
         />

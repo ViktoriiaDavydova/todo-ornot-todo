@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/styles.css"
+import "../css/styles.css";
 import { Button } from "react-bootstrap";
 import Seasons from "./Seasons";
 import Weekdays from "./Weekdays";
@@ -21,15 +21,11 @@ function createResult(result) {
 }
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       // options: [],
-      seasonOption: {
-        value: "",
-        label: "",
-      },
+      seasonOption: "",
     };
 
     this.handleSeasonChange = this.handleSeasonChange.bind(this);
@@ -46,14 +42,11 @@ class App extends Component {
   //   // console.log("handle season " + seasonOption);
   // }
 
-  handleSeasonChange( newValue) {
+  handleSeasonChange(newValue) {
     this.setState({
-      seasonOption: {
-        value: newValue.value,
-        label: newValue.label,
-      },
+      seasonOption: newValue,
     });
-    console.log("handle season " , this.state.seasonOption);
+    console.log("handle season ", this.state.seasonOption);
   }
 
   handleSubmit(event) {
@@ -66,7 +59,6 @@ class App extends Component {
   // }
 
   render() {
-
     return (
       <div className="container-fluid">
         <div className="row">
@@ -75,7 +67,7 @@ class App extends Component {
             <form onSubmit={this.handleSubmit}>
               <h2>Choose a season</h2>
               <Seasons
-                onChange={this.handleSeasonChange}
+                handleSeasonChange={this.handleSeasonChange}
                 value={this.state.seasonOption}
                 options={this.options}
               />
@@ -107,6 +99,11 @@ class App extends Component {
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
+              {results.filter((result) => result.includes("summer"))
+                .map((filteredResult) => (
+                  <li>{filteredResult}</li>
+                ))}
+
               {/* {results.map(createResult)} */}
             </div>
           </div>
