@@ -25,7 +25,7 @@ class App extends Component {
     super(props);
     this.state = {
       // options: [],
-      seasonOption: "",
+      seasonOption: ""
     };
 
     this.handleSeasonChange = this.handleSeasonChange.bind(this);
@@ -99,11 +99,6 @@ class App extends Component {
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
-              {results.filter((result) => result.includes("summer"))
-                .map((filteredResult) => (
-                  <li>{filteredResult}</li>
-                ))}
-
               {/* {results.map(createResult)} */}
             </div>
           </div>
