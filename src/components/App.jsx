@@ -7,7 +7,9 @@ import Dayparts from "./Dayparts";
 import Timelimit from "./Timelimit";
 import Result from "./Result";
 import Footer from "./Footer";
-import results from "../todoDB";
+import { results } from "../results";
+
+var _ = require("lodash");
 
 function createResult(result) {
   return (
@@ -16,6 +18,10 @@ function createResult(result) {
       id={result.id}
       activity={result.activity}
       img={result.img}
+      seaSon={results.season}
+      weekday={results.weekDay}
+      daypart={results.dayPart}
+      timelimit={results.timeLimit}
     />
   );
 }
@@ -24,39 +30,60 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // options: [],
-      seasonOption: ""
+      seasonOption: "",
+      weekdayOption: "",
+      daypartOption: "",
+      timelineOption: 1,
     };
 
     this.handleSeasonChange = this.handleSeasonChange.bind(this);
+    this.handleWeekdayChange = this.handleWeekdayChange.bind(this);
+    this.handleDaypartChange = this.handleDaypartChange.bind(this);
+    this.handleTimeChange = this.handleTimeChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  // handleSeasonChange( newValue) {
-  //   this.setState({
-  //     seasonOption: {
-  //       value: newValue.value,
-  //       label: newValue.label,
-  //     },
-  //   });
-  //   // console.log("handle season " + seasonOption);
-  // }
 
   handleSeasonChange(newValue) {
     this.setState({
       seasonOption: newValue,
     });
-    console.log("handle season ", this.state.seasonOption);
+  }
+
+  handleWeekdayChange(newValue) {
+    this.setState({
+      weekdayOption: newValue,
+    });
+  }
+
+  handleDaypartChange(newValue) {
+    this.setState({
+      daypartOption: newValue,
+    });
+  }
+
+  handleTimeChange(newValue) {
+    this.setState({
+      timelineOption: newValue,
+    });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("submit", this.state.seasonOption);
-  }
+    console.log("submit", this.state.timelineOption);
 
-  //  submitResult(event) {
-  //   // console.log(props.state.daypartValue);
-  // }
+    var filterResult = results.filter(
+      (result) =>
+        result.season.includes(this.state.seasonOption.value) &&
+        result.weekDay.includes(this.state.weekdayOption.value) &&
+        result.dayPart.includes(this.state.daypartOption.value) &&
+        result.timeLimit.includes(this.state.timelineOption)
+    );
+
+    const randomResult =
+      filterResult[Math.floor(Math.random() * filterResult.length)];
+    console.log(filterResult);
+    console.log(randomResult);
+  }
 
   render() {
     return (
@@ -73,19 +100,20 @@ class App extends Component {
               />
               <h2>Choose a day of the week</h2>
               <Weekdays
-                onChange={this.handleWeekdayChange}
-                weekdayValue={this.value}
+                handleWeekdayChange={this.handleWeekdayChange}
+                value={this.state.weekdayOption}
+                options={this.options}
               />
               <h2>Chose a part of the day</h2>
               <Dayparts
-                onChange={this.handleDaypartChange}
-                daypartValue={this.value}
+                handleDaypartChange={this.handleDaypartChange}
+                value={this.state.daypartOption}
               />
               <h2>How many free hours do you have?</h2>
               <br></br>
               <Timelimit
-                onChange={this.handleTimeChange}
-                timeValue={this.value}
+                handleTimeChange={this.handleTimeChange}
+                value={this.state.timelineOption}
               />
               <Button
                 type="submit"
@@ -99,7 +127,7 @@ class App extends Component {
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
-              {/* {results.map(createResult)} */}
+              {/* {createResult(filteredSeason)} */}
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-const results = [
+export const results = [
   {
     id: 1,
     activity: "Watch a movie",
@@ -472,15 +472,15 @@ const results = [
       "saturday",
       "sunday",
     ],
-    dayPart: ["evening"],
-    timeLimit: [1, 2],
+    dayPart: ["noon", "evening"],
+    timeLimit: [1, 2, 3],
     img:
       "https://images.pexels.com/photos/761999/pexels-photo-761999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: 29,
     activity: "Go rollerblading",
-    season: ["spring", "summer"],
+    season: ["spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["noon", "evening"],
     timeLimit: [1, 2, 3],
@@ -517,4 +517,4 @@ const results = [
   },
 ];
 
-export default results;
+// export default results;

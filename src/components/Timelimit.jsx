@@ -36,8 +36,13 @@ function valuetext(value) {
 function Timelimit(props) {
   const [hour, setHour] = useState(1);
 
-  function handleTimeChange(event, newValue) {
+  // function handleTimeChange(event, newValue) {
+  //   setHour(newValue);
+  // }
+
+  function handleChange(event, newValue) {
     setHour(newValue);
+    props.handleTimeChange(newValue);
   }
 
   const classes = useStyles();
@@ -53,7 +58,7 @@ function Timelimit(props) {
         valueLabelDisplay="auto"
         marks={marks}
         value={hour}
-        onChange={handleTimeChange}
+        onChange={handleChange}
       />
     </div>
   );

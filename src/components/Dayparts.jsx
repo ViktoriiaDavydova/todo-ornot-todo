@@ -1,43 +1,43 @@
-import React, {useState} from "react";
+import React, { Component } from "react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
-function Dayparts(props) {
+class Dayparts extends Component {
+  constructor(props) {
+    super(props);
 
-  const [dayPart, setDayPart] = useState({
-    value: "",
-    label: "",
-  });
+    this.state = { dayPart: "" };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-  const options = [
+  options = [
     { value: "morning", label: "Morning" },
     { value: "noon", label: "Noon" },
     { value: "evening", label: "Evening" },
     { value: "night", label: "Night" },
   ];
 
-  // const defaultOption = options[0];
+  handleChange = (newValue) => {
+    console.log("daypart ", newValue);
+    this.setState({ dayPart: newValue });
+    this.props.handleDaypartChange(newValue);
+  };
 
-  function handleDaypartChange(newValue) {
-    console.log(newValue);
-    setDayPart({
-      value: newValue.value,
-      label: newValue.label,
-    });
+  render() {
+    const defaultOption = this.state.dayPart;
+
+    return (
+      <div>
+        <Dropdown
+          className="dropDown"
+          options={this.options}
+          onChange={this.handleChange}
+          value={defaultOption}
+          placeholder="Select an option"
+          required={true}
+        />
+      </div>
+    );
   }
-
-  return (
-    <div className="dropDown">
-      <Dropdown
-        options={options}
-        // onChange={this._onSelect}
-        onChange={handleDaypartChange}
-        value={options.newValue}
-        placeholder="Select an option"
-        // required={true}
-      />
-    </div>
-  );
 }
-
 export default Dayparts;
