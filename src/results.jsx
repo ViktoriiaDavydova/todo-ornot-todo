@@ -500,8 +500,8 @@ export const results = [
       "saturday",
       "sunday",
     ],
-    dayPart: ["night"],
-    timeLimit: [3, 4, 5, 6],
+    dayPart: ["morning", "noon", "evening", "night"],
+    timeLimit: [1, 2, 3, 4, 5, 6],
     img:
       "https://images.pexels.com/photos/935777/pexels-photo-935777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
