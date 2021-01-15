@@ -9,7 +9,10 @@ body {
 
 h1 {
   font-weight: 700;
-  margin-bottom: 50px;
+}
+
+p {
+  color: grey;
 }
 
 .dropDown {
@@ -21,9 +24,6 @@ h1 {
   padding: 10px;
   margin: 10px 0 40px;
   background: #9bc7de;
-  /* color: #fff; */
-  /* outline: none; */
-  /* cursor: pointer; */
   font-weight: bold;
 }
 
@@ -33,17 +33,14 @@ h1 {
   background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
   background-color: #276873;
   border-radius: 8px;
-  /* border-color: #276873; */
   padding: 10px;
   margin: 50px 0;
   background: #9bc7de;
   color: #073b4c;
-  /* cursor: pointer; */
   font-weight: bold;
 }
 
 footer {
-  /* position: absolute; */
   text-align: center;
   bottom: 0;
   width: 100%;

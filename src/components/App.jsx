@@ -78,6 +78,8 @@ class App extends Component {
         <div className="row">
           <div className="col-lg-6">
             <h1>To do or not to do?</h1>
+            <p>Are you boring and don't know what to do? </p>
+            <p>Fill the fields and get some ideas how to spend your free time!</p>
             <form onSubmit={this.handleSubmit}>
               <h2>Choose a season</h2>
               <Seasons
