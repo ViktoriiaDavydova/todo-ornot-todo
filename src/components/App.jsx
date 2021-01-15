@@ -93,7 +93,7 @@ class App extends Component {
                 value={this.state.weekdayOption}
                 options={this.options}
               />
-              <h2>Chose a part of the day</h2>
+              <h2>Choose a part of the day</h2>
               <Dayparts
                 handleDaypartChange={this.handleDaypartChange}
                 value={this.state.daypartOption}
