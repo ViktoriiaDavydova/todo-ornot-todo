@@ -22,7 +22,7 @@ function Result(props) {
     props.handleSubmit(newValue);
   }
   return (
-    <div>
+    <div >
       <Card className={classes.root}>
         <CardHeader title={props.title} />
         <CardContent>
