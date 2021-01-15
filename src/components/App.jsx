@@ -58,7 +58,6 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("submit", this.state.timelineOption);
 
     var filterResult = results.filter(
       (result) =>
@@ -70,12 +69,7 @@ class App extends Component {
 
     const randomResult =
       filterResult[Math.floor(Math.random() * filterResult.length)];
-    console.log(filterResult);
-    console.log(randomResult);
-
     this.setState({ res: randomResult });
-
-    console.log("res ", this.state.res.title);
   }
 
   render() {
@@ -115,12 +109,19 @@ class App extends Component {
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
-              <Result
-                id={this.state.res.id}
-                title={this.state.res.title}
-                img={this.state.res.img}
-                handleSubmit={this.handleSubmit}
-              />
+              {this.state.res !== undefined ? (
+                <Result
+                  id={this.state.res.id}
+                  title={this.state.res.title}
+                  img={this.state.res.img}
+                  handleSubmit={this.handleSubmit}
+                />
+              ) : (
+                <Result
+                  title="All fields are required"
+                  img="https://images.pexels.com/photos/4271933/pexels-photo-4271933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                />
+              )}
             </div>
           </div>
         </div>
