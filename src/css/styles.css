@@ -77,4 +77,12 @@ footer {
     width: 100%;
     position: initial;
   }
+
+  footer {
+    position: relative;
+  }
+
+  .row {
+    width: 100%;
+  }
 }
