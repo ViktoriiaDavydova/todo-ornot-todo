@@ -29,16 +29,8 @@ function valuetext(value) {
   return `${value}`;
 }
 
-// function DiscreteSlider() {
-//   const classes = useStyles();
-// }
-
 function Timelimit(props) {
   const [hour, setHour] = useState(1);
-
-  // function handleTimeChange(event, newValue) {
-  //   setHour(newValue);
-  // }
 
   function handleChange(event, newValue) {
     setHour(newValue);

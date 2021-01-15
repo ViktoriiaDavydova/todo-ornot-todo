@@ -13,12 +13,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Result(props) {
-
-  const [res, setRes]=useState(null);
+  const [res, setRes] = useState(null);
 
   const classes = useStyles();
 
-  function handleRes( newValue){
+  function handleRes(newValue) {
     setRes(newValue);
     props.handleSubmit(newValue);
   }
@@ -31,7 +30,6 @@ function Result(props) {
             className={classes.media}
             id={props.id}
             image={props.img}
-            title={props.title}
             alt="Activity image"
             onSubmit={handleRes}
           />

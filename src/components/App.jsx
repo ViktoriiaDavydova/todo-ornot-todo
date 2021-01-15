@@ -9,23 +9,6 @@ import Result from "./Result";
 import Footer from "./Footer";
 import { results } from "../results";
 
-// var _ = require("lodash");
-
-// function createResult(result) {
-//   return (
-//     <Result
-//       key={result.id}
-//       id={result.id}
-//       activity={result.activity}
-//       img={result.img}
-//       // seaSon={result.season}
-//       // weekday={result.weekDay}
-//       // daypart={result.dayPart}
-//       // timelimit={result.timeLimit}
-//     />
-//   );
-// }
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +18,7 @@ class App extends Component {
       daypartOption: "",
       timelineOption: 1,
       res: {
-        // id: 0,
+        id: "",
         title: "Your result will be here",
         img:
           "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -125,19 +108,13 @@ class App extends Component {
                 handleTimeChange={this.handleTimeChange}
                 value={this.state.timelineOption}
               />
-              <Button
-                type="submit"
-                className="btn"
-                size="lg"
-              >
+              <Button type="submit" className="btn" size="lg">
                 Submit
               </Button>
             </form>
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
-              {/* {results.map(this.createResult)}  */}
-              {/* {this.createResult} */}
               <Result
                 id={this.state.res.id}
                 title={this.state.res.title}
