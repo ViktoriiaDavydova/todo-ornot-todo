@@ -1,7 +1,7 @@
 export const results = [
   {
     id: 1,
-    activity: "Watch a movie",
+    title: "Watch a movie",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -19,7 +19,7 @@ export const results = [
   },
   {
     id: 2,
-    activity: "Call your friend",
+    title: "Call your friend",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -37,7 +37,7 @@ export const results = [
   },
   {
     id: 3,
-    activity: "Go rafting",
+    title: "Go rafting",
     season: ["spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -55,7 +55,7 @@ export const results = [
   },
   {
     id: 4,
-    activity: "Read a book",
+    title: "Read a book",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -73,7 +73,7 @@ export const results = [
   },
   {
     id: 5,
-    activity: "Do yoga",
+    title: "Do yoga",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -91,7 +91,7 @@ export const results = [
   },
   {
     id: 6,
-    activity: "Go to a flea market",
+    title: "Go to a flea market",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["morning", "noon"],
@@ -100,7 +100,7 @@ export const results = [
       "https://images.pexels.com/photos/6070061/pexels-photo-6070061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
-    activity: "Go shopping",
+    title: "Go shopping",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -118,7 +118,7 @@ export const results = [
   },
   {
     id: 8,
-    activity: "Go out of the city",
+    title: "Go out of the city",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -136,7 +136,7 @@ export const results = [
   },
   {
     id: 9,
-    activity: "Go skiing",
+    title: "Go skiing",
     season: ["winter"],
     weekDay: [
       "monday",
@@ -154,7 +154,7 @@ export const results = [
   },
   {
     id: 10,
-    activity: "Go sunbathing",
+    title: "Go sunbathing",
     season: ["summer"],
     weekDay: [
       "monday",
@@ -172,7 +172,7 @@ export const results = [
   },
   {
     id: 11,
-    activity: "Bake a cake",
+    title: "Bake a cake",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -190,7 +190,7 @@ export const results = [
   },
   {
     id: 12,
-    activity: "Jogging or running",
+    title: "Jogging or running",
     season: ["spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -208,7 +208,7 @@ export const results = [
   },
   {
     id: 13,
-    activity: "Play a videogame",
+    title: "Play a videogame",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -226,7 +226,7 @@ export const results = [
   },
   {
     id: 14,
-    activity: "Find a new recipe and cook it",
+    title: "Find a new recipe and cook it",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -244,7 +244,7 @@ export const results = [
   },
   {
     id: 15,
-    activity: "Enjoy a sunset",
+    title: "Enjoy a sunset",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -262,7 +262,7 @@ export const results = [
   },
   {
     id: 16,
-    activity: "Have a picnic",
+    title: "Have a picnic",
     season: ["spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["morning", "noon"],
@@ -272,7 +272,7 @@ export const results = [
   },
   {
     id: 17,
-    activity: "Visit a museum",
+    title: "Visit a museum",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "tuesday",
@@ -289,7 +289,7 @@ export const results = [
   },
   {
     id: 18,
-    activity: "Do Sudoku or a crossword puzzle",
+    title: "Do Sudoku or a crossword puzzle",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -307,7 +307,7 @@ export const results = [
   },
   {
     id: 19,
-    activity: "Go hiking",
+    title: "Go hiking",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["morning", "noon"],
@@ -317,7 +317,7 @@ export const results = [
   },
   {
     id: 20,
-    activity: "Meditate",
+    title: "Meditate",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -335,7 +335,7 @@ export const results = [
   },
   {
     id: 21,
-    activity: "Call your family member",
+    title: "Call your family member",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -353,7 +353,7 @@ export const results = [
   },
   {
     id: 22,
-    activity: "Look at old photos",
+    title: "Look at old photos",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -371,7 +371,7 @@ export const results = [
   },
   {
     id: 23,
-    activity: "Get a massage",
+    title: "Get a massage",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -389,7 +389,7 @@ export const results = [
   },
   {
     id: 24,
-    activity: "Stargazing",
+    title: "Stargazing",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -407,7 +407,7 @@ export const results = [
   },
   {
     id: 25,
-    activity: "Take a nap",
+    title: "Take a nap",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -425,7 +425,7 @@ export const results = [
   },
   {
     id: 26,
-    activity: "Read about something new",
+    title: "Read about something new",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -443,7 +443,7 @@ export const results = [
   },
   {
     id: 27,
-    activity: "Clean your home",
+    title: "Clean your home",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -461,7 +461,7 @@ export const results = [
   },
   {
     id: 28,
-    activity: "Throw out old stuff",
+    title: "Throw out old stuff",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -479,7 +479,7 @@ export const results = [
   },
   {
     id: 29,
-    activity: "Go rollerblading",
+    title: "Go rollerblading",
     season: ["spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["noon", "evening"],
@@ -489,7 +489,7 @@ export const results = [
   },
   {
     id: 30,
-    activity: "Just sleep",
+    title: "Just sleep",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: [
       "monday",
@@ -507,7 +507,7 @@ export const results = [
   },
   {
     id: 31,
-    activity: "Go to park",
+    title: "Go to park",
     season: ["winter", "spring", "summer", "fall"],
     weekDay: ["saturday", "sunday"],
     dayPart: ["morning", "noon", "evening"],

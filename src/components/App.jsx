@@ -92,7 +92,7 @@ class App extends Component {
 
     this.setState({ res: randomResult });
 
-    console.log("res ", this.state.res.activity);
+    console.log("res ", this.state.res.title);
   }
 
   render() {
@@ -140,8 +140,9 @@ class App extends Component {
               {/* {this.createResult} */}
               <Result
                 id={this.state.res.id}
-                title={this.state.res.activity}
+                title={this.state.res.title}
                 img={this.state.res.img}
+                handleSubmit={this.handleSubmit}
               />
             </div>
           </div>

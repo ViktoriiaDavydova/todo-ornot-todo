@@ -25,7 +25,7 @@ function Result(props) {
   return (
     <div>
       <Card className={classes.root}>
-        <CardHeader title={props.activity} />
+        <CardHeader title={props.title} />
         <CardContent>
           <CardMedia
             className={classes.media}
