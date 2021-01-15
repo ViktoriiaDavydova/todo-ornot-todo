@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardMedia } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -13,7 +13,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Result(props) {
+
+  const [res, setRes]=useState(null);
+
   const classes = useStyles();
+
+  function handleRes( newValue){
+    setRes(newValue);
+    props.handleSubmit(newValue);
+  }
   return (
     <div>
       <Card className={classes.root}>
@@ -21,9 +29,11 @@ function Result(props) {
         <CardContent>
           <CardMedia
             className={classes.media}
+            id={props.id}
             image={props.img}
-            title={props.activity}
+            title={props.title}
             alt="Activity image"
+            onSubmit={handleRes}
           />
         </CardContent>
       </Card>

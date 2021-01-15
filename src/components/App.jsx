@@ -9,22 +9,22 @@ import Result from "./Result";
 import Footer from "./Footer";
 import { results } from "../results";
 
-var _ = require("lodash");
+// var _ = require("lodash");
 
-function createResult(result) {
-  return (
-    <Result
-      key={result.id}
-      id={result.id}
-      activity={result.activity}
-      img={result.img}
-      seaSon={results.season}
-      weekday={results.weekDay}
-      daypart={results.dayPart}
-      timelimit={results.timeLimit}
-    />
-  );
-}
+// function createResult(result) {
+//   return (
+//     <Result
+//       key={result.id}
+//       id={result.id}
+//       activity={result.activity}
+//       img={result.img}
+//       // seaSon={result.season}
+//       // weekday={result.weekDay}
+//       // daypart={result.dayPart}
+//       // timelimit={result.timeLimit}
+//     />
+//   );
+// }
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +34,12 @@ class App extends Component {
       weekdayOption: "",
       daypartOption: "",
       timelineOption: 1,
+      res: {
+        // id: 0,
+        title: "Your result will be here",
+        img:
+          "https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      },
     };
 
     this.handleSeasonChange = this.handleSeasonChange.bind(this);
@@ -83,6 +89,10 @@ class App extends Component {
       filterResult[Math.floor(Math.random() * filterResult.length)];
     console.log(filterResult);
     console.log(randomResult);
+
+    this.setState({ res: randomResult });
+
+    console.log("res ", this.state.res.activity);
   }
 
   render() {
@@ -119,7 +129,6 @@ class App extends Component {
                 type="submit"
                 className="btn"
                 size="lg"
-                // onClick={this.submitResult}
               >
                 Submit
               </Button>
@@ -127,7 +136,13 @@ class App extends Component {
           </div>
           <div className="col-lg-6">
             <div className="resultStyle">
-              {/* {createResult(filteredSeason)} */}
+              {/* {results.map(this.createResult)}  */}
+              {/* {this.createResult} */}
+              <Result
+                id={this.state.res.id}
+                title={this.state.res.activity}
+                img={this.state.res.img}
+              />
             </div>
           </div>
         </div>
