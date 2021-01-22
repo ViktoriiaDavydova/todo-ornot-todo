@@ -79,7 +79,9 @@ class App extends Component {
           <div className="col-lg-6">
             <h1>To do or not to do?</h1>
             <p>Are you bored and don't know what to do? </p>
-            <p>Fill the fields and get some ideas how to spend your free time!</p>
+            <p>
+              Fill the fields and get some ideas how to spend your free time!
+            </p>
             <form onSubmit={this.handleSubmit}>
               <h2>Choose a season</h2>
               <Seasons
@@ -109,24 +111,24 @@ class App extends Component {
               </Button>
             </form>
           </div>
-          <div className="col-lg-6">
-            <div className="resultStyle">
-              {this.state.res !== undefined ? (
-                <Result
-                  id={this.state.res.id}
-                  title={this.state.res.title}
-                  img={this.state.res.img}
-                  handleSubmit={this.handleSubmit}
-                />
-              ) : (
-                <Result
-                  title="All fields are required"
-                  img="https://images.pexels.com/photos/4271933/pexels-photo-4271933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                />
-              )}
-            </div>
+          <br />
+          <div className="col-lg-6 resultStyle">
+            {this.state.res !== undefined ? (
+              <Result
+                id={this.state.res.id}
+                title={this.state.res.title}
+                img={this.state.res.img}
+                handleSubmit={this.handleSubmit}
+              />
+            ) : (
+              <Result
+                title="All fields are required"
+                img="https://images.pexels.com/photos/4271933/pexels-photo-4271933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              />
+            )}
           </div>
         </div>
+        <br />
         <Footer />
       </div>
     );
